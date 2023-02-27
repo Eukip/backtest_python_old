@@ -1,0 +1,231 @@
+{
+    "RSI": {
+        "name": "Индекс относительной силы",
+        "params": [
+          {
+            "name": "period",
+            "desc": "Длина",
+            "field_type": "integer",
+            "value": 15
+          },
+          {
+            "name": "offset",
+            "desc": "Смещение",
+            "field_type": "integer",
+            "value": 1
+          }
+        ]
+    },
+    "MACD": {
+        "name": "Индикатор схождения-расхождения скользящих средних",
+        "params": [
+          {
+            "name": "periodSignal",
+            "desc": "periodSignal",
+            "field_type": "integer",
+            "value": 9
+          },
+          {
+            "name": "periodFast",
+            "desc": "periodFast",
+            "field_type": "integer",
+            "value": 12
+          },
+          {
+            "name": "periodLong",
+            "desc": "periodLong",
+            "field_type": "integer",
+            "value": 26
+          },
+          {
+            "name": "offset",
+            "desc": "Смещение",
+            "field_type": "integer",
+            "value": 1
+          }
+        ]
+    },
+    "EMA": {
+        "name": "Экспоненциальная скользящая средняя",
+        "params": [
+          {
+            "name": "period",
+            "desc": "Длина",
+            "field_type": "integer",
+            "value": 15
+          },
+          {
+            "name": "offset",
+            "desc": "Смещение",
+            "field_type": "integer",
+            "value": 1
+          }
+        ]
+    },
+    "RMA": {
+        "name": "Скользящая средняя (Rolling Moving Average)",
+        "params": [
+          {
+            "name": "period",
+            "desc": "Длина",
+            "field_type": "integer",
+            "value": 15
+          },
+          {
+            "name": "offset",
+            "desc": "Смещение",
+            "field_type": "integer",
+            "value": 1
+          }
+        ]
+    },
+    "SMA": {
+        "name": "Скользящая средняя (Simple Moving Average)",
+        "params": [
+          {
+            "name": "period",
+            "desc": "Длина",
+            "field_type": "integer",
+            "value": 15
+          },
+          {
+            "name": "offset",
+            "desc": "Смещение",
+            "field_type": "integer",
+            "value": 1
+          }
+        ]
+    },
+    "SMMA": {
+        "name": "Скользящая средняя (Smoothed Moving Average)",
+        "params": [
+          {
+            "name": "period",
+            "desc": "Длина",
+            "field_type": "integer",
+            "value": 15
+          },
+          {
+            "name": "offset",
+            "desc": "Смещение",
+            "field_type": "integer",
+            "value": 1
+          }
+        ]
+    },
+    "WMA": {
+        "name": "Скользящая средняя (Weighted Moving Average)",
+        "params": [
+          {
+            "name": "period",
+            "desc": "Длина",
+            "field_type": "integer",
+            "value": 15
+          },
+          {
+            "name": "offset",
+            "desc": "Смещение",
+            "field_type": "integer",
+            "value": 1
+          }
+        ]
+    },
+    "AROON": {
+        "name": "Aroon",
+        "params": [
+          {
+            "name": "period",
+            "desc": "Длина",
+            "field_type": "integer",
+            "value": 15
+          }
+        ]
+    },
+    "Bbandsw": {
+        "name": "BbandsW",
+        "params": [
+          {
+            "name": "period",
+            "desc": "Длина",
+            "field_type": "integer",
+            "value": 15
+          },
+          {
+            "name": "offset",
+            "desc": "Смещение",
+            "field_type": "integer",
+            "value": 1
+          },
+          {
+            "name": "multiplier",
+            "desc": "Мультипликатор",
+            "field_type": "integer",
+            "value": 20
+          }
+        ]
+    },
+    "Bbands": {
+        "name": "Bbands",
+        "params": [
+          {
+            "name": "period",
+            "desc": "Длина",
+            "field_type": "integer",
+            "value": 15
+          },
+          {
+            "name": "offset",
+            "desc": "Смещение",
+            "field_type": "integer",
+            "value": 1
+          },
+          {
+            "name": "multiplier",
+            "desc": "Мультипликатор",
+            "field_type": "integer",
+            "value": 20
+          }
+        ]
+    },
+    "BbandsB": {
+        "name": "BbandsB",
+        "params": [
+          {
+            "name": "period",
+            "desc": "Длина",
+            "field_type": "integer",
+            "value": 15
+          },
+          {
+            "name": "offset",
+            "desc": "Смещение",
+            "field_type": "integer",
+            "value": 1
+          },
+          {
+            "name": "multiplier",
+            "desc": "Мультипликатор",
+            "field_type": "integer",
+            "value": 20
+          }
+        ]
+    },
+    "RSI_TV": {
+        "name": "Индекс относительной силы (TV)",
+        "params": [
+          {
+            "name": "period",
+            "desc": "Длина",
+            "field_type": "integer",
+            "value": 15
+          },
+          {
+            "name": "offset",
+            "desc": "Смещение",
+            "field_type": "integer",
+            "value": 1
+          }
+        ]
+    },
+    "pumpProtectorLowperc": [{}]
+}

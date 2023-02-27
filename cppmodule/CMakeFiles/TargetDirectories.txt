@@ -1,0 +1,3 @@
+/home/eugene/PythonProjects/altcointrader-backtest-system/cppmodule/CMakeFiles/module_name.dir
+/home/eugene/PythonProjects/altcointrader-backtest-system/cppmodule/CMakeFiles/edit_cache.dir
+/home/eugene/PythonProjects/altcointrader-backtest-system/cppmodule/CMakeFiles/rebuild_cache.dir

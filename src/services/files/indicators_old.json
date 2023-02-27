@@ -1,0 +1,170 @@
+
+{
+  "general_fields": [
+    {"Входной ТФ графика": {
+      "field_type": "choice",
+      "value": ["1min", "15min", "30min", "1hour", "4hour", "1day"]
+    }},
+    {"От": {
+      "field_type": "datetime",
+      "value": "2022-05-09T08:22:43"
+    }},
+    {"До": {
+      "field_type": "datetime",
+      "value": "2022-05-15T08:22:43"
+    }},
+    {"Валютная пара": {
+      "field_type": "text",
+      "value": "VIDTBTC"
+    }}
+  ],
+
+  "indicators": {
+    "RSI": [
+      {"Length": {
+        "field_type": "integer",
+        "value": 15
+      }},
+      {"Смещение": {
+        "field_type": "integer",
+        "value": 1
+      }},
+      {"Выходной параметр": {
+        "field_type": "integer",
+        "value": 70
+      }},
+      {"Выходной параметр": {
+        "field_type": "integer",
+        "value": 30
+      }}
+    ],
+    "EMA": [
+      { "Length": {
+        "field_type": "integer",
+        "value": 15
+      }},
+      {"Смещение": {
+        "field_type": "integer",
+        "value": 1
+      }}
+    ],
+    "RMA": [
+      { "Length": {
+        "field_type": "integer",
+        "value": 15
+      }},
+      {"Смещение": {
+        "field_type": "integer",
+        "value": 1
+      }}
+    ],
+    "SMA": [
+      { "Length": {
+        "field_type": "integer",
+        "value": 15
+      }},
+      {"Смещение": {
+        "field_type": "integer",
+        "value": 1
+      }}
+    ],
+    "SMMA": [
+      {"Length": {
+       "field_type": "integer",
+       "value": 15
+        }},
+      {"Смещение": {
+       "field_type": "integer",
+       "value": 1
+        }}
+    ],
+    "WMA": [
+      {"Length": {
+        "field_type": "integer",
+        "value": 15
+        }},
+      {"Смещение": {
+       "field_type": "integer",
+       "value": 1
+        }}
+    ],
+    "AROON": [
+      {"Length": {
+        "field_type": "integer",
+        "value": 15
+      }},
+      {"Выходной параметр": {
+        "field_type": "integer",
+        "value": 75
+      }},
+      {"Выходной параметр": {
+        "field_type": "integer",
+        "value": -75
+      }}
+    ],
+    "Bbandsw": [
+      {"bbandsw_period": {
+        "field_name": "Length",
+        "field_type": "integer",
+        "value": 15
+      }},
+      {"Смещение": {
+        "field_name": "выборка",
+        "field_type": "integer",
+        "value": 1
+      }},
+      {"multiplyer": {
+        "field_name": "Mult",
+        "field_type": "integer",
+        "value": 20
+      }}
+    ],
+    "MACD": [
+      {"SignalLength": {
+        "field_type": "integer",
+        "value": 9
+      }},
+      {"Смещение": {
+        "field_type": "integer",
+        "value": 1
+      }},
+      {"FastLength": {
+        "field_type": "integer",
+        "value": 12
+      }},
+      {"SlowLength": {
+        "field_type": "integer",
+        "value": 26
+      }}
+    ],
+    "Bbands%": [
+      {"Length": {
+        "field_type": "integer",
+        "value": 15
+      }},
+      {"Смещение": {
+        "field_type": "integer",
+        "value": 1
+      }},
+      {"Mult": {
+        "field_type": "integer",
+        "value": 20
+      }}
+    ],
+    "BbandsB": [
+      {"Length": {
+        "field_type": "integer",
+        "value": 15
+      }},
+      {"Смещение": {
+        "field_type": "integer",
+        "value": 1
+      }},
+      {"Mult": {
+        "field_type": "integer",
+        "value": 20
+      }}
+    ],
+    "pumpProtectorLowperc": [{}]
+  }
+}

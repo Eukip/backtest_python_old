@@ -1,0 +1,11 @@
+.idea
+.env
+.history
+*__pycache__/
+venv
+*.xmind
+.vscode/
+*vscode/
+xmind/
+*uploads/
+*.swp

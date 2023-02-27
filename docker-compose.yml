@@ -1,0 +1,79 @@
+version: "2.1"
+services:
+  python:
+    build: .
+    restart: unless-stopped
+    environment:
+      - DEBUG=${DEBUG}
+      - DB_PASS=${DB_PASS}
+      - DB_USER=${DB_USER}
+      - DB_NAME=${DB_NAME}
+      - DB_HOST=${DB_HOST}
+      - WEB_PORT=${WEB_PORT}
+      - DB_PORT=${DB_PORT}
+      - REDIS_PORT=${REDIS_PORT}
+      - REDIS_DB=${REDIS_DB}
+      - REDIS_PASSWORD=${REDIS_PASSWORD}
+      - REDIS_HOST=${REDIS_HOST}
+      - CLICKHOUSE_PORT=${CLICKHOUSE_PORT}
+      - CLICKHOUSE_HOST=${CLICKHOUSE_HOST}
+      - CLICKHOUSE_USER=${CLICKHOUSE_USER}
+      - CLICKHOUSE_PASSWORD=${CLICKHOUSE_PASSWORD}
+      - CLICKHOUSE_DATABASE=${CLICKHOUSE_DATABASE}
+
+    command: [ 'uvicorn', 'main:app', '--reload', '--host', '0.0.0.0', '--port', '5000' ]
+    volumes:
+      - ./src:/app
+    ports:
+      - 0.0.0.0:${WEB_PORT}:5000
+    networks:
+      - altcointrader-backtest-system_altcoin-net
+
+
+  redis:
+    restart: unless-stopped
+    image: redis
+    ports:
+      - 0.0.0.0:${REDIS_EXPOSE_PORT}:6379
+    environment:
+      - REDIS_DB=${REDIS_DB}
+      - REDIS_PASSWORD=${REDIS_PASSWORD}
+      - REDIS_PORT=${REDIS_PORT}
+    networks:
+      - altcointrader-backtest-system_altcoin-net
+
+  ch_server:
+    image: yandex/clickhouse-server
+    hostname: ch_server
+    ports:
+      - 0.0.0.0:${CLICKHOUSE_PORT}:8123
+    environment:
+      - CLICKHOUSE_PORT=${CLICKHOUSE_PORT}
+      - CLICKHOUSE_HOST=${CLICKHOUSE_HOST}
+      - CLICKHOUSE_USER=${CLICKHOUSE_USER}
+      - CLICKHOUSE_PASSWORD=${CLICKHOUSE_PASSWORD}
+      - CLICKHOUSE_DATABASE=${CLICKHOUSE_DATABASE}
+    networks:
+      - altcointrader-backtest-system_altcoin-net
+
+
+  postgres:
+    restart: unless-stopped
+    image: postgres
+    command: ["postgres", "-c", "log_statement=all"]
+    hostname: postgres
+    ports:
+      - 0.0.0.0:${DB_PORT}:5432
+    environment:
+      - POSTGRES_DB=${DB_NAME}
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASS}
+    networks:
+      - altcointrader-backtest-system_altcoin-net
+
+volumes:
+  postgres-data:
+
+networks:
+  altcointrader-backtest-system_altcoin-net:
+    external: true
